@@ -1,4 +1,4 @@
-# Django Twitter Clone by Redian Marku
+# RosBoltun
 
 Fully functional Django App that looks ecxatly like real Twitter.
 
