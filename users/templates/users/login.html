@@ -6,17 +6,17 @@
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class="mb-3 white-important">
-                Login
+                Логин
             </legend>
             {{ form | crispy }}
         </fieldset>
         <div class="form-group">
-            <button class="btn btn-outline-primary" type="submit">Login</button>
+            <button class="btn btn-outline-primary" type="submit">Логин</button>
         </div>
     </form>
     <div class="pt-3">
         <small class="text-muted">
-            Do you need an account? <a class="ml-2" href="{% url 'register-users' %}">Sign up</a>
+            Вам нужен аккаунт? <a class="ml-2" href="{% url 'register-users' %}">Авторизация</a>
         </small>
     </div>
 </div>

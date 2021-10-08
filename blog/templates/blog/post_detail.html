@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
     <h3 class="white-important mb-3">
-        Post
+        Публикация
     </h3>
    <article class="media content-section">
         <div style="width: 100%; word-break: break-all;" class="hovered-tweet-comment">
@@ -24,10 +24,10 @@
                    {% if post.author == user %}
                         <a class="material-icons ml-2"
                            style="font-size: 14px"
-                                href="{% url 'post-delete' post.id %}">clear</a>
+                                href="{% url 'post-delete' post.id %}">Очистить</a>
                         <a class="material-icons ml-2"
                            style="font-size: 14px"
-                                href="{% url 'post-update' post.id %}">update</a>
+                                href="{% url 'post-update' post.id %}">Обновить</a>
                     {%  endif %}
                </div>
            </div>
@@ -49,7 +49,7 @@
     <div class="row pl-3">
         <div class="col-12 col-md-6 pl-0">
          <h3 class="white-important mb-3">
-             Comments
+             Комментарии
          </h3>
         {% for comment in comments %}
             <article class="media content-section">
@@ -87,7 +87,7 @@
         {% if user is not None %}
             <div class="col-12 col-md-6 pl-0 pl-md-3 pr-3">
                 <h3 class="white-important mb-3">
-                    Add a comment
+                    Добавить комментарий
                 </h3>
                 <form method="POST">
                     {% csrf_token %}
@@ -95,7 +95,7 @@
                         {{ form | crispy }}
                     </fieldset>
                     <div class="form-group">
-                        <button class="btn btn-outline-primary" type="submit">Submit comment</button>
+                        <button class="btn btn-outline-primary" type="submit">Публиковать</button>
                     </div>
                 </form>
             </div>
