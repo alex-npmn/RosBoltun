@@ -158,7 +158,7 @@
                                         href="{% url 'post-delete' post.id %}">Очистить</a>
                                 <a class="material-icons ml-2"
                                    style="font-size: 14px"
-                                        href="{% url 'post-update' post.id %}">Обновить</a>
+                                        href="{% url 'post-update' post.id %}">Редактировать</a>
                             {%  endif %}
                        </div>
                    </div>
@@ -195,7 +195,7 @@
                                 </small>
                                 <small style="opacity: 0.4; margin-left:15px;">
                                     <a href="/post/{{post.id}}/">
-                                        <i style=" font-size: 16px;" class="far fa-comment"></i> {{ post.number_of_comments }} comment(s)
+                                        <i style=" font-size: 16px;" class="far fa-comment"></i> {{ post.number_of_comments }}
                                     </a>
 
                                 </small>
@@ -245,7 +245,7 @@
             <form action="{% url 'search' %}" method="post">{% csrf_token %}
                 <div class="search-container">
                     <div class="search">
-                    <input required name="search" type="text" id="zip-code-input" placeholder="Search Twitter">
+                    <input required name="search" type="text" id="zip-code-input" placeholder="Искать профили">
                     <button type="submit" style="border:0; background: transparent;"><i class="fa fa-search"></i> </button> </a>
                 </form>
               </div>
@@ -287,12 +287,8 @@
 
                 </article>
                 {% endif %}
-                <p><a href="">Условия</a>,
-<a href="">Политика конфиденциальности</a>,
-<a href="">Файлы cookie</a>,
-<a href="">Информация об объявлениях</a>,
-<a href="">И другое...</a>
-© 2021 РосБолтун, Inc.</p>
+                <p>
+© 2021 РосБолтун</p>
 
         </div>
     </div>
