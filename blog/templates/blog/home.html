@@ -6,7 +6,8 @@
             <a href="/"> <h2><img class="img-fluid" width="60" src="{% static 'blog/logo.png' %}">РосБолтун</h2></a><br>
             <div class="profile-section">
             <h3 class="white-important p-2">
-                Profile
+                Профиль
+
             </h3>
             <article class="media content-section" style="height: 140px; width: 100%">
                 {%  if user_profile != None %}
@@ -49,10 +50,10 @@
             <article class="media content-section">
                 <div class="row full-width pl-2">
                     <div class="col-6">
-                            Followers
+                            Подписчики
                     </div>
                     <div class="col-6">
-                            Following
+                            Подписки
                     </div>
                     {%  if user_profile != None %}
                         <div class="col-6">
@@ -93,7 +94,7 @@
                 {% if user_profile is None %}
                 <div style="margin-left: auto; margin-right:auto">
                     <a class="btn btn-sm btn-outline-primary mb-4 mr-3 " href="{% url 'post-create' %}">
-                        Tweet
+                        Публикация
                     </a>
                 </div>
                 {% endif %}
@@ -105,9 +106,9 @@
                                     name="{% if can_follow %}follow{% else %}unfollow{% endif %}"
                                     type="submit">
                                  {% if can_follow %}
-                                     FOLLOW
+                                     Подписаться
                                  {% else %}
-                                     UNFOLLOW
+                                     Отписаться
                                  {% endif %}
                             </button>
                         </div>
@@ -154,10 +155,10 @@
                            {% if post.author == user %}
                                 <a class="material-icons ml-2"
                                    style="font-size: 14px"
-                                        href="{% url 'post-delete' post.id %}">clear</a>
+                                        href="{% url 'post-delete' post.id %}">Очистить</a>
                                 <a class="material-icons ml-2"
                                    style="font-size: 14px"
-                                        href="{% url 'post-update' post.id %}">update</a>
+                                        href="{% url 'post-update' post.id %}">Редактировать</a>
                             {%  endif %}
                        </div>
                    </div>
@@ -194,7 +195,7 @@
                                 </small>
                                 <small style="opacity: 0.4; margin-left:15px;">
                                     <a href="/post/{{post.id}}/">
-                                        <i style=" font-size: 16px;" class="far fa-comment"></i> {{ post.number_of_comments }} comment(s)
+                                        <i style=" font-size: 16px;" class="far fa-comment"></i> {{ post.number_of_comments }}
                                     </a>
 
                                 </small>
@@ -216,9 +217,9 @@
                 {% if is_paginated %}
                     {% if page_obj.has_previous %}
                         <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
-                                href="?page=1">First</a>
+                                href="?page=1">Первая</a>
                         <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
-                                href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                                href="?page={{ page_obj.previous_page_number }}">Предыдущая</a>
                     {% endif %}
 
                     {% for num in page_obj.paginator.page_range %}
@@ -233,9 +234,9 @@
 
                     {% if page_obj.has_next %}
                         <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
-                                href="?page={{ page_obj.next_page_number }}">Next</a>
+                                href="?page={{ page_obj.next_page_number }}">Следующая</a>
                            <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
-                            href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                            href="?page={{ page_obj.paginator.num_pages }}">Последняя</a>
                     {% endif %}
                 {% endif %}
             </div>
@@ -244,12 +245,13 @@
             <form action="{% url 'search' %}" method="post">{% csrf_token %}
                 <div class="search-container">
                     <div class="search">
-                    <input required name="search" type="text" id="zip-code-input" placeholder="Search Twitter">
+                    <input required name="search" type="text" id="zip-code-input" placeholder="Искать профили">
                     <button type="submit" style="border:0; background: transparent;"><i class="fa fa-search"></i> </button> </a>
                 </form>
               </div>
             </div>
-            <h3 class="white-important mb-3 mt-4"> Trends </h3>
+            <h3 class="white-important mb-3 mt-4"> Актуальное </h3>
+
 
                 {%  if user_profile is None %}
 
@@ -257,7 +259,7 @@
 
                     <div class="row ">
                         <div class="col-12">
-                            <h3>Who to follow</h3>
+                            <h3>Подписчики</h3>
                         </div>
                         <ul class="col-12 mt-2">
                             {% for user in all_users %}
@@ -285,12 +287,8 @@
 
                 </article>
                 {% endif %}
-                <p><a href="">Terms</a>,
-<a href="">Privacy policy</a>,
-<a href="">Cookies</a>,
-<a href="">Ads info</a>,
-<a href="">More</a>
-© 2020 Twitter, Inc.</p>
+                <p>
+© 2021 РосБолтун</p>
 
         </div>
     </div>
