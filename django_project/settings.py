@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*n*f0zqlu+cgn&m*sd3^qkz9b=nw6db(tfo$156o9ag-%2f_eq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'xn--90augbbjilj.xn--p1ai', 'xn--90augbbjilj.xn--p1ai:80', '192.168.1.111:80', '81.163.172.144', 'росболтун.рф', 'www.xn--90augbbjilj.xn--p1ai']
+ALLOWED_HOSTS = ['127.0.0.1', 'xn--90augbbjilj.xn--p1ai', 'xn--90augbbjilj.xn--p1ai:80', 'www.xn--90augbbjilj.xn--p1ai', '192.168.1.111:80', '81.163.172.144', 'росболтун.рф', 'www.росболтун.рф', 'росболтун.рф:80', 'www.росболтун.рф:80']
 
 
 # Application definition
@@ -113,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
