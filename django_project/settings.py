@@ -25,7 +25,7 @@ SECRET_KEY = '*n*f0zqlu+cgn&m*sd3^qkz9b=nw6db(tfo$156o9ag-%2f_eq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'xn--90augbbjilj.xn--p1ai', 'xn--90augbbjilj.xn--p1ai:80', '192.168.1.111:80', '81.163.172.144', 'росболтун.рф']
+ALLOWED_HOSTS = ['127.0.0.1', 'xn--90augbbjilj.xn--p1ai', 'xn--90augbbjilj.xn--p1ai:80', '192.168.1.111:80', '81.163.172.144', 'росболтун.рф', 'www.xn--90augbbjilj.xn--p1ai']
 
 
 # Application definition
